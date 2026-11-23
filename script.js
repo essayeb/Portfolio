@@ -14,7 +14,7 @@ const portfolioConfig = {
       category: ["interactive", "web"],
       visual: "vote",
       symbol: "◉",
-      url: "https://votepalette.ct.ws/results.php",
+      url: "https://votepalette.ct.ws/index.php",
       status: "EN LIGNE",
     },
     {
@@ -355,3 +355,4 @@ if (
       revealObserver.observe(element);
     });
 }
+
