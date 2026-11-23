@@ -7,28 +7,6 @@ const portfolioConfig = {
 
   projects: [
     {
-      name: "Vote Palette",
-      description:
-        "Une plateforme de vote permettant aux participants de choisir des palettes de couleurs et de consulter les résultats.",
-      technologies: ["PHP", "MySQL", "CSS"],
-      category: ["interactive", "web"],
-      visual: "vote",
-      symbol: "◉",
-      url: "https://votepalette.ct.ws/index.php",
-      status: "EN LIGNE",
-    },
-    {
-      name: "Vote Produit",
-      description:
-        "Une plateforme de vote de produits permettant aux participants de faire leurs choix et de consulter les résultats.",
-      technologies: ["PHP", "MySQL", "JavaScript"],
-      category: ["interactive", "web"],
-      visual: "product",
-      symbol: "◇",
-      url: "https://voteproduit.gt.tc/index.php#",
-      status: "EN LIGNE",
-    },
-    {
       name: "Smart School",
       description: "Un concept moderne de plateforme de gestion scolaire.",
       technologies: ["HTML", "CSS", "JavaScript"],
@@ -59,6 +37,28 @@ const portfolioConfig = {
       symbol: "</>",
       url: "https://essayeb.github.io/CodeLearn/",
       status: "EN DÉVELOPPEMENT",
+    },
+    {
+      name: "Vote Palette",
+      description:
+        "Une plateforme de vote permettant aux participants de choisir des palettes de couleurs et de consulter les résultats.",
+      technologies: ["PHP", "MySQL", "CSS"],
+      category: ["interactive", "web"],
+      visual: "vote",
+      symbol: "◉",
+      url: "https://votepalette.ct.ws/index.php",
+      status: "EN LIGNE",
+    },
+    {
+      name: "Vote Produit",
+      description:
+        "Une plateforme de vote de produits permettant aux participants de faire leurs choix et de consulter les résultats.",
+      technologies: ["PHP", "MySQL", "JavaScript"],
+      category: ["interactive", "web"],
+      visual: "product",
+      symbol: "◇",
+      url: "https://voteproduit.gt.tc/index.php#",
+      status: "EN LIGNE",
     },
   ],
 };
@@ -355,4 +355,5 @@ if (
       revealObserver.observe(element);
     });
 }
+
 
