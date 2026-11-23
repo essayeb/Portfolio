@@ -1,4 +1,4 @@
-/* Rayen Essayeb — Portfolio JavaScript */
+/* Rayen Essayeb — JavaScript du portfolio */
 
 const portfolioConfig = {
   email: "malisia224@gmail.com",
@@ -9,61 +9,61 @@ const portfolioConfig = {
     {
       name: "Vote Palette",
       description:
-        "A voting platform where participants choose colour palettes and explore voting results.",
+        "Une plateforme de vote permettant aux participants de choisir des palettes de couleurs et de consulter les résultats.",
       technologies: ["PHP", "MySQL", "CSS"],
       category: ["interactive", "web"],
       visual: "vote",
       symbol: "◉",
       url: "https://votepalette.ct.ws/results.php",
-      status: "LIVE",
+      status: "EN LIGNE",
     },
     {
       name: "Vote Produit",
       description:
-        "A product voting platform with participant choices and a results interface.",
+        "Une plateforme de vote de produits permettant aux participants de faire leurs choix et de consulter les résultats.",
       technologies: ["PHP", "MySQL", "JavaScript"],
       category: ["interactive", "web"],
       visual: "product",
       symbol: "◇",
       url: "https://voteproduit.gt.tc/index.php#",
-      status: "LIVE",
+      status: "EN LIGNE",
     },
     {
       name: "Smart School",
-      description: "A modern school management platform concept.",
+      description: "Un concept moderne de plateforme de gestion scolaire.",
       technologies: ["HTML", "CSS", "JavaScript"],
       category: ["web"],
       visual: "school",
       symbol: "▤",
       url: "https://essayeb.github.io/SmartSchool-/",
-      status: "IN DEVELOPMENT",
+      status: "EN DÉVELOPPEMENT",
     },
     {
       name: "Eventify",
       description:
-        "An event discovery and management platform for finding and organizing events.",
+        "Une plateforme de découverte et de gestion d’événements permettant de trouver et d’organiser des événements.",
       technologies: ["HTML", "CSS", "JavaScript"],
       category: ["web", "interactive"],
       visual: "event",
       symbol: "✳",
       url: "https://essayeb.github.io/Eventify/",
-      status: "IN DEVELOPMENT",
+      status: "EN DÉVELOPPEMENT",
     },
     {
       name: "CodeLearn",
       description:
-        "An interactive programming platform for learning languages and practicing coding exercises.",
+        "Une plateforme interactive d’apprentissage de la programmation proposant des langages et des exercices pratiques.",
       technologies: ["HTML", "CSS", "JavaScript"],
       category: ["learning", "interactive"],
       visual: "code",
       symbol: "</>",
       url: "https://essayeb.github.io/CodeLearn/",
-      status: "IN DEVELOPMENT",
+      status: "EN DÉVELOPPEMENT",
     },
   ],
 };
 
-/* PROJECT CARDS */
+/* CARTES DES PROJETS */
 
 const grid = document.querySelector("#projectsGrid");
 
@@ -99,10 +99,10 @@ function createProjectCard(project, index) {
   const category = document.createElement("span");
   category.className = "project-category";
   category.textContent = project.category.includes("learning")
-    ? "LEARNING PROJECT"
+    ? "PROJET D’APPRENTISSAGE"
     : project.category.includes("interactive")
-    ? "INTERACTIVE WEB"
-    : "WEB APPLICATION";
+    ? "APPLICATION WEB INTERACTIVE"
+    : "APPLICATION WEB";
 
   const number = document.createElement("span");
   number.className = "project-number";
@@ -132,7 +132,7 @@ function createProjectCard(project, index) {
   actions.className = "project-actions";
 
   const view = document.createElement("a");
-  view.textContent = "View project ";
+  view.textContent = "Voir le projet ";
 
   const arrow = document.createElement("span");
   arrow.textContent = "↗";
@@ -142,11 +142,11 @@ function createProjectCard(project, index) {
     view.href = project.url;
     view.target = "_blank";
     view.rel = "noopener noreferrer";
-    view.setAttribute("aria-label", `View ${project.name}`);
+    view.setAttribute("aria-label", `Voir le projet ${project.name}`);
   } else {
     view.href = "#";
     view.setAttribute("aria-disabled", "true");
-    view.title = "Project not published yet.";
+    view.title = "Ce projet n’est pas encore publié.";
   }
 
   const status = document.createElement("span");
@@ -160,7 +160,7 @@ function createProjectCard(project, index) {
   return card;
 }
 
-/* PROJECT FILTERING */
+/* FILTRAGE DES PROJETS */
 
 function renderProjects(filter = "all") {
   if (!grid) return;
@@ -198,7 +198,7 @@ document.querySelectorAll(".filter-button").forEach((button) => {
 
 renderProjects();
 
-/* MOBILE NAVIGATION */
+/* NAVIGATION SUR MOBILE */
 
 const menuToggle = document.querySelector("#menuToggle");
 const navLinks = document.querySelector("#navLinks");
@@ -209,7 +209,7 @@ menuToggle?.addEventListener("click", () => {
   menuToggle.setAttribute("aria-expanded", String(open));
   menuToggle.setAttribute(
     "aria-label",
-    open ? "Close navigation" : "Open navigation"
+    open ? "Fermer le menu de navigation" : "Ouvrir le menu de navigation"
   );
 
   navLinks?.classList.toggle("open", open);
@@ -219,13 +219,11 @@ navLinks?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("open");
     menuToggle?.setAttribute("aria-expanded", "false");
-    menuToggle?.setAttribute("aria-label", "Open navigation");
+    menuToggle?.setAttribute("aria-label", "Ouvrir le menu de navigation");
   });
 });
 
-/* CONTACT INFORMATION */
-
-/* CONTACT INFORMATION */
+/* COORDONNÉES */
 
 const emailButton = document.querySelector("#emailButton");
 const emailText = document.querySelector("#emailText");
@@ -256,14 +254,14 @@ if (linkedinLink) {
   linkedinLink.href = portfolioConfig.linkedin;
 }
 
-/* DARK / LIGHT THEME */
+/* THÈME SOMBRE / CLAIR */
 
 const themeButton = document.createElement("button");
 
 themeButton.className = "theme-toggle";
 themeButton.type = "button";
-themeButton.setAttribute("aria-label", "Switch to light theme");
-themeButton.title = "Toggle light / dark theme";
+themeButton.setAttribute("aria-label", "Passer au thème clair");
+themeButton.title = "Basculer entre le thème clair et le thème sombre";
 themeButton.textContent = "☼";
 
 document.body.append(themeButton);
@@ -281,7 +279,7 @@ function updateThemeButton() {
 
   themeButton.setAttribute(
     "aria-label",
-    light ? "Switch to dark theme" : "Switch to light theme"
+    light ? "Passer au thème sombre" : "Passer au thème clair"
   );
 }
 
@@ -301,7 +299,7 @@ themeButton.addEventListener("click", () => {
   updateThemeButton();
 });
 
-/* SCROLL TO TOP */
+/* RETOUR EN HAUT DE PAGE */
 
 const toTop = document.querySelector("#toTop");
 
@@ -320,7 +318,7 @@ toTop?.addEventListener("click", () => {
   });
 });
 
-/* AUTOMATIC COPYRIGHT YEAR */
+/* ANNÉE AUTOMATIQUE DU DROIT D’AUTEUR */
 
 const year = document.querySelector("#year");
 
@@ -328,7 +326,7 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
-/* SECTION REVEAL ANIMATIONS */
+/* ANIMATIONS D’APPARITION DES SECTIONS */
 
 if (
   "IntersectionObserver" in window &&
